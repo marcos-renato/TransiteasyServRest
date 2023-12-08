@@ -17,5 +17,5 @@
        console.log('server initialized ' + PORT);
     });
   
-    require('../transiteasyServRest/src/routes/index')(app);
+    require('./src/routes/index')(app);
     
