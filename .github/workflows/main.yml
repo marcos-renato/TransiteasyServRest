@@ -31,3 +31,6 @@ jobs:
          cd src;
          npm install -g mocha;
          npm install
+         
+      - name: execução do test
+        run: mocha src/test/*.test.js
