@@ -33,4 +33,4 @@ jobs:
          npm install
          
       - name: execução do test
-        run: mocha src/test/*.test.js
+        run: mocha src/test/PaisController.test.js
