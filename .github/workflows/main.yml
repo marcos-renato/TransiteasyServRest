@@ -26,11 +26,10 @@ jobs:
         with:
           node-version: '20.10.0'
           
-      - name: Instalação do Mocha e dos pacotes para teste
+      - name: Instalação do Jest e dos pacotes para teste
         run: |
-         cd src;
-         npm install -g mocha;
-         npm install
-         
-      - name: execução do test
-        run: mocha test/PaisControler.test.js
+          npm install jest
+          npm install
+
+      - name: execução dos testes com Jest
+        run: npm test
