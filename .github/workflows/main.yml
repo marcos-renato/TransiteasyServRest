@@ -45,4 +45,7 @@ jobs:
           tags: |
             marcosrenato/transiteasyservrest:v1
             marcosrenato/transiteasyservrest:latest
+        env:
+            DOCKERHUB_USERNAME: ${{secrets.DOCKERHUB_USERNAME}}
+            DOCKERHUB_TOKEN: ${{secrets.DOCKERHUB_TOKEN}}
 
