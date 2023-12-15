@@ -53,4 +53,11 @@ jobs:
           tags: |
             marcosrenato/transiteasyservrest:${{github.run_number}}
             marcosrenato/transiteasyservrest:latest
+            
+      - name: Acesso ao servidor Linode e execução do contêiner
+        run: |
+          ssh root@45.79.53.83 "docker pull marcosrenato/transiteasyservrest:${{github.run_number}}"
+          ssh root@45.79.53.83 "docker run -d -p 3310:3310 marcosrenato/transiteasyservrest:${{github.run_number}}"
+          env:
+            SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
 
