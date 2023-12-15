@@ -51,6 +51,6 @@ jobs:
           file: Dockerfile
           push: true
           tags: |
-            marcosrenato/transiteasyservrest:v1
+            marcosrenato/transiteasyservrest:${{github.run_number}}
             marcosrenato/transiteasyservrest:latest
 
