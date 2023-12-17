@@ -53,11 +53,18 @@ jobs:
           tags: |
             marcosrenato/transiteasyservrest:${{github.run_number}}
             marcosrenato/transiteasyservrest:latest
-            
-      - name: Acesso ao servidor Linode e execução do contêiner
-        run: |
-          ssh root@45.79.53.83 "docker pull marcosrenato/transiteasyservrest:${{github.run_number}}"
-          ssh root@45.79.53.83 "docker run -d -p 3310:3310 marcosrenato/transiteasyservrest:${{github.run_number}}"
-          env:
-            SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+       
+      - name: ssh pipelines
+        uses: cross-the-world/ssh-pipeline@master
+        env:
+          WELCOME: "ssh pipeline"
+        with:
+          host: ${{ secrets.DC_HOST }}
+          user: ${{ secrets.DC_USER }}
+          pass: ${{ secrets.DC_PASS }}
+          port: ${{ secrets.DC_PORT }}
+          connect_timeout: 10s
+          script: |
+            docker pull marcosrenato/transiteasyservrest:${{github.run_number}}
+            docker run -d -p 3310:3310 marcosrenato/transiteasyservrest:${{github.run_number}}  
 
