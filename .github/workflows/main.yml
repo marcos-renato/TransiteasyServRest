@@ -56,7 +56,7 @@ jobs:
     
       - name: CONEXÃO COM O SERVIDOR
         run: |
-            ssh user@seu_endereco_de_ip "docker stop nome_do_container_anterior && docker rm nome_do_container_anterior && docker pull marcosrenato/transiteasyservrest:${{github.run_number}} && docker run -d -p 3310:3310 --name nome_do_container_novo marcosrenato/transiteasyservrest:${{github.run_number}}"
+            ssh ${{ secrets.DC_USER }}@${{ secrets.DC_HOST }} "docker stop transiteasyservrest && docker rm transiteasyservrest && docker pull marcosrenato/transiteasyservrest:${{github.run_number}} && docker run -d -p 3310:3310 --name transiteasyservrest marcosrenato/transiteasyservrest:${{github.run_number}}"
         env:
           SSH_PRIVATE_KEY: ${{ secrets.DC_PASS }}
 
