@@ -1,5 +1,5 @@
 # This is a basic workflow to help you get started with Actions
-name: CI
+name: CI/CD
 
 # Controls when the workflow will run
 on:
@@ -53,8 +53,8 @@ jobs:
           tags: |
             marcosrenato/transiteasyservrest:${{github.run_number}}
             marcosrenato/transiteasyservrest:latest
-       
-      - name: ssh pipelines
+    
+      - name: CONEXÃO COM O SERVIDOR
         uses: cross-the-world/ssh-pipeline@master
         env:
           WELCOME: "ssh pipeline"
@@ -64,7 +64,7 @@ jobs:
           pass: ${{ secrets.DC_PASS }}
           port: ${{ secrets.DC_PORT }}
           connect_timeout: 10s
-          script: |
-            docker pull marcosrenato/transiteasyservrest:${{github.run_number}}
-            docker run -d -p 3310:3310 marcosrenato/transiteasyservrest:${{github.run_number}}  
+           script:|
+             docker pull marcosrenato/transiteasyservrest:${{github.run_number}}
+             docker run -d -p 3310:3310 marcosrenato/transiteasyservrest:${{github.run_number}}  
 
