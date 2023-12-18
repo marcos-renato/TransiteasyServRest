@@ -53,6 +53,14 @@ jobs:
           tags: |
             marcosrenato/transiteasyservrest:${{github.run_number}}
             marcosrenato/transiteasyservrest:latest
+            
+      - name: Configure SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          eval $(ssh-agent)
+          ssh-add ~/.ssh/id_rsa
 
       - name: Acessar Linode via SSH
         uses: appleboy/ssh-action@master
