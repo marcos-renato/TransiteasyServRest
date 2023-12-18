@@ -63,11 +63,6 @@ jobs:
           source: "."
           destination: "/app/"
           scripts: |
-            command: ls
+             ls
             
-            
-
-
-
-      
-       
+          
