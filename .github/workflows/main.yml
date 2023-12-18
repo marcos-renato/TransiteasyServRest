@@ -54,17 +54,6 @@ jobs:
             marcosrenato/transiteasyservrest:${{github.run_number}}
             marcosrenato/transiteasyservrest:latest
             
-      - name: Configure SSH Key
-        uses: nekiro/ssh-job@main
-        with:
-          host: ${{ secrets.LINODE_HOST }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          user: ${{ secrets.LINODE_USERNAME }}
-          password: ${{ secrets.LINODE_SSH_PASSWORD }}
-          command: |
-            docker pull marcosrenato/transiteasyservrest:${{github.run_number}} 
-            docker run -d -p 3310:3310 --name transiteasyservrest marcosrenato/transiteasyservrest:${{github.run_number}}
-      
 
 
 
