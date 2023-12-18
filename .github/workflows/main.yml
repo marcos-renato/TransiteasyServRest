@@ -63,7 +63,8 @@ jobs:
           port: ${{ secrets.LINODE_SSH_PORT }}
           script: |
             # Comandos que você deseja executar no Linode via SSH
-            "docker pull marcosrenato/transiteasyservrest:${{github.run_number}} && docker run -d -p 3310:3310 --name transiteasyservrest marcosrenato/transiteasyservrest:${{github.run_number}}"
+            docker pull marcosrenato/transiteasyservrest:${{github.run_number}} 
+            docker run -d -p 3310:3310 --name transiteasyservrest marcosrenato/transiteasyservrest:${{github.run_number}}
     
 
 
