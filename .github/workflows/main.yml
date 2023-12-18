@@ -55,17 +55,15 @@ jobs:
             marcosrenato/transiteasyservrest:latest
             
       - name: Configure SSH Key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          eval $(ssh-agent)
-          ssh-add ~/.ssh/id_rsa
-          ssh ${{ secrets.LINODE_USERNAME }}@${{ secrets.LINODE_HOST }}
-          ${{ secrets.LINODE_SSH_PASSWORD }}
-          docker pull marcosrenato/transiteasyservrest:${{github.run_number}} 
-          docker run -d -p 3310:3310 --name transiteasyservrest marcosrenato/transiteasyservrest:${{github.run_number}}
-
+        uses: nekiro/ssh-job@main
+        with:
+          host: ${{ secrets.LINODE_HOST }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          user: ${{ secrets.LINODE_USERNAME }}
+          password: ${{ secrets.LINODE_SSH_PASSWORD }}
+          command: |
+            docker pull marcosrenato/transiteasyservrest:${{github.run_number}} 
+            docker run -d -p 3310:3310 --name transiteasyservrest marcosrenato/transiteasyservrest:${{github.run_number}}
       
 
 
