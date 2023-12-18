@@ -64,7 +64,7 @@ jobs:
           script: |
             # Comandos que você deseja executar no Linode via SSH
             echo "Conexão SSH estabelecida!"
-            #"docker stop transiteasyservrest && docker rm transiteasyservrest && docker pull marcosrenato/transiteasyservrest:${{github.run_number}} && docker run -d -p 3310:3310 --name transiteasyservrest marcosrenato/transiteasyservrest:${{github.run_number}}"
+            "docker stop transiteasyservrest && docker rm transiteasyservrest && docker pull marcosrenato/transiteasyservrest:${{github.run_number}} && docker run -d -p 3310:3310 --name transiteasyservrest marcosrenato/transiteasyservrest:${{github.run_number}}"
     
 
 
