@@ -53,12 +53,19 @@ jobs:
           tags: |
             marcosrenato/transiteasyservrest:${{github.run_number}}
             marcosrenato/transiteasyservrest:latest
-    
-      - name: CONEXÃO COM O SERVIDOR
-        run: |
+
+      - name: Acessar Linode via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.LINODE_HOST }}
+          username: ${{ secrets.LINODE_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.LINODE_SSH_PORT }}
+          script: |
+            # Comandos que você deseja executar no Linode via SSH
+            echo "Conexão SSH estabelecida!"
             ssh ${{ secrets.DC_USER }}@${{ secrets.DC_HOST }} "docker stop transiteasyservrest && docker rm transiteasyservrest && docker pull marcosrenato/transiteasyservrest:${{github.run_number}} && docker run -d -p 3310:3310 --name transiteasyservrest marcosrenato/transiteasyservrest:${{github.run_number}}"
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+    
 
 
 
