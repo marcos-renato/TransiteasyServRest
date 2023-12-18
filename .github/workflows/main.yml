@@ -58,7 +58,7 @@ jobs:
         run: |
             ssh ${{ secrets.DC_USER }}@${{ secrets.DC_HOST }} "docker stop transiteasyservrest && docker rm transiteasyservrest && docker pull marcosrenato/transiteasyservrest:${{github.run_number}} && docker run -d -p 3310:3310 --name transiteasyservrest marcosrenato/transiteasyservrest:${{github.run_number}}"
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.DC_PASS }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
 
 
