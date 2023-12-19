@@ -25,7 +25,7 @@ describe('Testes para a função excluirCidade', () => {
 
   it('Deve retornar um status 404 se a cidade não for encontrado', async () => {
     // Simule uma solicitação para uma cidade inexistente
-    const req = { params: { id: 999 } };
+    const req = { params: { id: 99999 } };
     const res = {
       status: jest.fn(() => res),
       json: jest.fn(),
@@ -60,7 +60,7 @@ describe('Testes para a função listarCidades', () => {
 describe('Testes para a função obterCidadePorId', () => {
   it('Deve retornar um status 404 se a cidade não for encontrado', async () => {
     // Simule uma solicitação para uma cidade inexistente
-    const req = { params: { id: 999 } };
+    const req = { params: { id: 99999 } };
     const res = {
       status: jest.fn(),
       json: jest.fn(),

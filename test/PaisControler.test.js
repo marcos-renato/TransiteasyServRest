@@ -25,7 +25,7 @@ describe('Testes para a função excluirPais', () => {
 
   it('Deve retornar um status 404 se o país não for encontrado', async () => {
     // Simule uma solicitação para um país inexistente
-    const req = { params: { id: 999 } };
+    const req = { params: { id: 99999 } };
     const res = {
       status: jest.fn(() => res),
       json: jest.fn(),
@@ -62,7 +62,7 @@ describe('Testes para a função obterPaisPorId', () => {
 
   it('Deve retornar um status 404 se o país não for encontrado', async () => {
     // Simule uma solicitação para um país inexistente
-    const req = { params: { id: 999 } };
+    const req = { params: { id: 99999 } };
     const res = {
       status: jest.fn(),
       json: jest.fn(),
