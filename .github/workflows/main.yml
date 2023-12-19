@@ -64,6 +64,3 @@ jobs:
           destination: /app/
           scripts: |
              ls
-             
-            
-          
