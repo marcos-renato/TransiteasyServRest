@@ -2,11 +2,11 @@ const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize({
   dialect: 'mysql', // Use 'mysql' para MariaDB
-  host: '45.79.53.83', 
-  //host: '172.17.0.2', 
-  username: 'transiteasy',
-  password: '12345678', 
-  database: 'transiteasydb', 
+  host: '', 
+  
+  username: '',
+  password: '', 
+  database: '', 
 });
 
 // Testar a conexão
