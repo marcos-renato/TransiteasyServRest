@@ -4,7 +4,7 @@ const EstadoController = require('../src/controllers/EstadoControler'); // Impor
 describe('Testes para a função excluirEstado', () => {
     it('Deve excluir um estado com sucesso', async () => {
         // Crie um país para testar a exclusão
-        const novoEstado = await Estado.create({ nmEstado: 'newEstadoTest', idPais: 5,uf:'NT'});
+        const novoEstado = await Estado.create({ nmEstado: 'newEstadoTest', idPais: 1,uf:'NT'});
 
         // Simule uma solicitação e resposta
         const req = { params: { id: novoEstado.idEstado } };

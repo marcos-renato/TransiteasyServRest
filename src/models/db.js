@@ -2,11 +2,11 @@ const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize({
   dialect: 'mysql', // Use 'mysql' para MariaDB
-  host: ${{secrets.HOSTDB}}, 
-  
-  username: ${{secrets.USERDB}},
-  password: ${{secrets.PASSWORDDB}}, 
-  database: ${{secrets.DATABASE}}, 
+  host: '45.33.50.50', 
+  port:'3499',
+  username: 'adm_server',
+  password: 'M$rc3l4V1c3nt3F@b14n4M4rt1ns', 
+  database: 'trasitedb', 
 });
 
 // Testar a conexão
