@@ -5,7 +5,7 @@ const cidadeControler = require('../src/controllers/CidadeControler'); // Import
 describe('Testes para a função excluirCidade', () => {
   it('Deve excluir uma cidade com sucesso', async () => {
     // Crie um cidade para testar a exclusão
-    const novaCidade = await Cidade.create({ nmCidade: 'newCidadeTest', snAtivo: 'S',idEstado:2 });
+    const novaCidade = await Cidade.create({ nmCidade: 'newCidadeTest', snAtivo: 'S',idEstado:1 });
 
     // Simule uma solicitação e resposta
     const req = { params: { id: novaCidade.idCidade } };
