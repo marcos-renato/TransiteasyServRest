@@ -4,11 +4,11 @@ const hostDB=process.env.hostDBSECRET;*/
 
 const sequelize = new Sequelize({
   dialect: 'mysql', // Use 'mysql' para MariaDB
-  host:hostDB, 
-  port:'',
-  username: '',
-  password: '', 
-  database: '', 
+  host:${{ secrets.HOSTDB }}, 
+  port:${{ secrets.PORTDB }},
+  username: ${{ secrets.USERNAMEDB }},
+  password: ${{ secrets.PASSWORDDB }}, 
+  database: ${{ secrets.DATABASEDB }}, 
 });
 
 // Testar a conexão
