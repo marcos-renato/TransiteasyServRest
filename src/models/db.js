@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
-require('dotenv').config();
-const hostDB=process.env.hostDBSECRET;
+/*require('dotenv').config();
+const hostDB=process.env.hostDBSECRET;*/
 
 const sequelize = new Sequelize({
   dialect: 'mysql', // Use 'mysql' para MariaDB
