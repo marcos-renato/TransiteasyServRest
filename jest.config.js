@@ -12,4 +12,6 @@ module.exports = {
 
     // Setup global para seus testes, se necessário
     setupFiles: ['<rootDir>/test/setup.js'],
+
+    setupFilesAfterEnv: ['./path/to/setupTests.js'],
 };

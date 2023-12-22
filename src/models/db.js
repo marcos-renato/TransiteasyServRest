@@ -1,14 +1,18 @@
+require('dotenv').config();
+const hostDb=process.env.hostDbSECRET;
+const portDB=process.env.portDBSECRET;
+const usernameDB=process.env.usernameDBSECRET;
+const passwordDB=process.env.passwordDBSECRET;
+const databaseDB=process.env.databaseDBSECRET;
+const dialectDB=process.env.dialectDBSECRET;
 const Sequelize = require('sequelize');
-/*require('dotenv').config();
-const hostDB=process.env.hostDBSECRET;*/
-
 const sequelize = new Sequelize({
-  dialect: 'mysql', // Use 'mysql' para MariaDB
-  host:'${{ secrets.HOSTDB }}', 
-  port:'${{ secrets.PORTDB }}',
-  username: '${{ secrets.USERNAMEDB }}',
-  password: '${{ secrets.PASSWORDDB }}', 
-  database: '${{ secrets.DATABASEDB }}'
+  dialect: dialectDB, 
+  host: hostDb, 
+  port: portDB,
+  username: usernameDB,
+  password: passwordDB, 
+  database: databaseDB
 });
 
 // Testar a conexão
