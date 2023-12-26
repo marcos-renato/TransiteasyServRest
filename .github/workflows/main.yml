@@ -32,7 +32,16 @@ jobs:
           passwordDB: ${{secrets.passwordDBSECRET}}
           databaseDB: ${{secrets.databaseDBSECRET}}
           dialectDBSECRET: ${{secrets.dialectDBSECRET}}
-          
+
+      - name: Set up environment variables
+        run: |
+            export hostDb=${{secrets.hostDbSECRET}}
+            export portDB=${{secrets.portDBSECRET}}
+            export usernameDB=${{secrets.usernameDBSECRET}}
+            export passwordDB=${{secrets.passwordDBSECRET}}
+            export databaseDB=${{secrets.databaseDBSECRET}}
+            export dialectDBSECRET=${{secrets.dialectDBSECRET}}
+            
       - name: Instalação do Jest e dos pacotes para teste
         run: |
           npm install jest
