@@ -25,13 +25,6 @@ jobs:
         uses: actions/setup-node@v4.0.0
         with:
           node-version: '20.10.0'
-        env:
-          hostDb: ${{secrets.hostDbSECRET}}
-          portDB: ${{secrets.portDBSECRET}}
-          usernameDB: ${{secrets.usernameDBSECRET}}
-          passwordDB: ${{secrets.passwordDBSECRET}}
-          databaseDB: ${{secrets.databaseDBSECRET}}
-          dialectDBSECRET: ${{secrets.dialectDBSECRET}}
 
       - name: Set up environment variables
         run: |
