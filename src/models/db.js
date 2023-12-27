@@ -1,10 +1,10 @@
 require('dotenv').config();
-const hostDb=process.env.hostDbSECRET;
-const portDB=process.env.portDBSECRET;
-const usernameDB=process.env.usernameDBSECRET;
-const passwordDB=process.env.passwordDBSECRET;
-const databaseDB=process.env.databaseDBSECRET;
-const dialectDB=process.env.dialectDBSECRET;
+const hostDb=process.env.HOSTDBSECRET;
+const portDB=process.env.PORTDBSECRET;
+const usernameDB=process.env.USERNAMEDBSECRET;
+const passwordDB=process.env.PASSWORDDBSECRET;
+const databaseDB=process.env.DATABASEDBSECRET;
+const dialectDB=process.env.DIALECTDBSECRET;
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize({
   dialect: dialectDB, 
