@@ -30,17 +30,42 @@ jobs:
       # You may pin to the exact commit or the version.
       # uses: shobhitsharma/var-dotenv-action@3d7f78e4e46f53cf59bd71d70fb43cde849aaed4
         uses: shobhitsharma/var-dotenv-action@v1.1.0
-        with: |
+        with: 
           key:  ‘HOSTDBSECRET’
           value: ${{secrets.HOSTDBSECRET}}
+      - name: var-dotenv-action
+      # You may pin to the exact commit or the version.
+      # uses: shobhitsharma/var-dotenv-action@3d7f78e4e46f53cf59bd71d70fb43cde849aaed4
+        uses: shobhitsharma/var-dotenv-action@v1.1.0
+        with: 
           key:  ‘PORTDBSECRET’
           value: ${{secrets.PORTDBSECRET }}
+      - name: var-dotenv-action
+      # You may pin to the exact commit or the version.
+      # uses: shobhitsharma/var-dotenv-action@3d7f78e4e46f53cf59bd71d70fb43cde849aaed4
+        uses: shobhitsharma/var-dotenv-action@v1.1.0
+        with: 
           key:  ‘USERNAMEDBSECRET’
           value: ${{secrets.USERNAMEDBSECRET }}
+      - name: var-dotenv-action
+      # You may pin to the exact commit or the version.
+      # uses: shobhitsharma/var-dotenv-action@3d7f78e4e46f53cf59bd71d70fb43cde849aaed4
+        uses: shobhitsharma/var-dotenv-action@v1.1.0
+        with: 
           key:  ‘PASSWORDDBSECRET’
           value: ${{secrets.PASSWORDDBSECRET }}
+      - name: var-dotenv-action
+      # You may pin to the exact commit or the version.
+      # uses: shobhitsharma/var-dotenv-action@3d7f78e4e46f53cf59bd71d70fb43cde849aaed4
+        uses: shobhitsharma/var-dotenv-action@v1.1.0
+        with: 
           key:  ‘DATABASEDBSECRET’
           value: ${{secrets.DATABASEDBSECRET }}
+      - name: var-dotenv-action
+      # You may pin to the exact commit or the version.
+      # uses: shobhitsharma/var-dotenv-action@3d7f78e4e46f53cf59bd71d70fb43cde849aaed4
+        uses: shobhitsharma/var-dotenv-action@v1.1.0
+        with: 
           key:  ‘DIALECTDBSECRET’
           value: ${{secrets.DIALECTDBSECRET }}
             
