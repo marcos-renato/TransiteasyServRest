@@ -1,5 +1,5 @@
-const Sequelize = require('sequelize');
-const database = require('../models/db');
+/*const Sequelize = require('sequelize');
+const database = require('../models/db');*/
 const Estado = require('../models/Estado');
 const express = require('express');
 const bodyParser = require('body-parser');

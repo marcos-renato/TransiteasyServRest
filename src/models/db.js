@@ -1,18 +1,12 @@
 require('dotenv').config();
-const HOSTDB=process.env.HOSTDBSECRET;
-const PORTDB=process.env.PORTDBSECRET;
-const USERNAMEDB=process.env.USERNAMEDBSECRET;
-const PASSWORDDB=process.env.PASSWORDDBSECRET;
-const DATABASEDB=process.env.DATABASEDBSECRET;
-const DIALECTDB=process.env.DIALECTDBSECRET;
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize({
-  dialect: DIALECTDB, 
-  host: HOSTDB, 
-  port: PORTDB,
-  username: USERNAMEDB,
-  password: PASSWORDDB, 
-  database: DATABASEDB
+  dialect: process.env.DIALECTDBSECRET,
+  host: process.env.HOSTDBSECRET,
+  port: process.env.PORTDBSECRET,
+  username: process.env.USERNAMEDBSECRET,
+  password: process.env.PASSWORDDBSECRET,
+  database: process.env.DATABASEDBSECRET
 });
 
 // Testar a conexão
