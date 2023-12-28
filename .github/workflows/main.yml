@@ -28,12 +28,12 @@ jobs:
           
       - name: Set up environment variables
         run: |
-            export HOSTDB=${{secrets.HOSTDBSECRET}}
-            export PORTDB=${{secrets.PORTDBSECRET}}
-            export USERNAMEDB=${{secrets.USERNAMEDBSECRET}}
-            export PASSWORDDB=${{secrets.PASSWORDDBSECRET}}
-            export DATABASEDB=${{secrets.DATABASEDBSECRET}}
-            export DIALECTDB=${{secrets.DIALECTDBSECRET}}
+            export HOSTDBSECRET=${{secrets.HOSTDBSECRET}}
+            export PORTDBSECRET=${{secrets.PORTDBSECRET}}
+            export USERNAMEDBSECRET=${{secrets.USERNAMEDBSECRET}}
+            export PASSWORDDBSECRET=${{secrets.PASSWORDDBSECRET}}
+            export DATABASEDBSECRET=${{secrets.DATABASEDBSECRET}}
+            export DIALECTDBSECRET=${{secrets.DIALECTDBSECRET}}
      
             
       - name: Instalação do Jest e dos pacotes para teste
