@@ -30,10 +30,10 @@ jobs:
         run: |
             export HOSTDB=${{secrets.HOSTDBSECRET}}
             export PORTDB=${{secrets.PORTDBSECRET}}
-            export USERNAMEDB='${{secrets.USERNAMEDBSECRET}}'
-            export PASSWORDDB='${{secrets.PASSWORDDBSECRET}}'
-            export DATABASEDB='${{secrets.DATABASEDBSECRET}}'
-            export DIALECTDB='${{secrets.DIALECTDBSECRET}}'
+            export USERNAMEDB=${{secrets.USERNAMEDBSECRET}}
+            export PASSWORDDB=${{secrets.PASSWORDDBSECRET}}
+            export DATABASEDB=${{secrets.DATABASEDBSECRET}}
+            export DIALECTDB=${{secrets.DIALECTDBSECRET}}
      
             
       - name: Instalação do Jest e dos pacotes para teste
