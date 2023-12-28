@@ -26,14 +26,23 @@ jobs:
         with:
           node-version: '20.10.0'
 
-      - name: Set up environment variables
-        run: |
-            export hostDb=${{secrets.HOSTDBSECRET}}
-            export portDB=${{secrets.PORTDBSECRET}}
-            export usernameDB=${{secrets.USERNAMEDBSECRET}}
-            export passwordDB=${{secrets.PASSWORDDBSECRET}}
-            export databaseDB=${{secrets.DATABASEDBSECRET}}
-            export dialectDBSECRET=${{secrets.DIALECTDBSECRET}}
+      - name: var-dotenv-action
+      # You may pin to the exact commit or the version.
+      # uses: shobhitsharma/var-dotenv-action@3d7f78e4e46f53cf59bd71d70fb43cde849aaed4
+        uses: shobhitsharma/var-dotenv-action@v1.1.0
+        with: |
+          key:  ‘HOSTDBSECRET’
+          value: ${{secrets.HOSTDBSECRET}}
+          key:  ‘PORTDBSECRET’
+          value: ${{secrets.PORTDBSECRET }}
+          key:  ‘USERNAMEDBSECRET’
+          value: ${{secrets.USERNAMEDBSECRET }}
+          key:  ‘PASSWORDDBSECRET’
+          value: ${{secrets.PASSWORDDBSECRET }}
+          key:  ‘DATABASEDBSECRET’
+          value: ${{secrets.DATABASEDBSECRET }}
+          key:  ‘DIALECTDBSECRET’
+          value: ${{secrets.DIALECTDBSECRET }}
             
       - name: Instalação do Jest e dos pacotes para teste
         run: |
