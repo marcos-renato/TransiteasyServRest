@@ -7,7 +7,7 @@ const DATABASEDB=process.env.DATABASEDBSECRET;
 const DIALECTDB=process.env.DIALECTDBSECRET;
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize({
-  dialect: DIALECTDB, 
+  dialect: mysql, 
   host: HOSTDB, 
   port: PORTDB,
   username: USERNAMEDB,
