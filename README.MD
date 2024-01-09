@@ -1,6 +1,8 @@
 ## TransiteasyServRest
 
 Projeto backend com a logica do sistema Transiteasy
+Tecnologias utilizadas: Jest, Express, Sequelize, Nodemon, Dotenv
+Pepilene: Utiliza github actions para gerar imagem no Docker hub
 
 * Frontend - appTransiteasy
 * Banco de dados - transiteyasydb
