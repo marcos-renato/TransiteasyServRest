@@ -1,23 +1,18 @@
-COMO RODAR O PROJETO ABAIXO
-### npm install
+## TransiteasyServRest
 
-Rodar o projeto
-### node db.js
+Projeto backend com a logica do sistema Transiteasy
 
-SEQUENCIA PARA CRIAR O PROJETO
-Criar o arquivo package
-### npm init
+* Frontend - appTransiteasy
+* Banco de dados - transiteyasydb
 
-Instalar o Mysql
-### npm install --save mysql2
+### Etapas para rodar o projeto
 
-Instalar a dependência de forma global, "-g" significa globalmente. Executar o comando através do prompt de comando, executar somente se nunca instalou a dependência na maquina, após instalar, reiniciar o PC.
+#### 1º executar o repositorio marcos-renato/transiteasydb
+git clone https://github.com/marcos-renato/transiteasydb.git
 
-### npm install -g nodemon
+#### 2º Baixar este repositorio
+git clone https://github.com/marcos-renato/TransiteasyServRest.git
 
-Instalar a dependencia como desenvolvedor para reinicar o servidor sempre que houver alteração no código fonte.
+Obs.: utiliza dotenv necessita criar arquivo .env
+e colocar os dados de conexão nas variaveis de ambiente
 
-### npm install --save-dev nodemon
-
-Rodar o projeto usando o nodemon
-### nodemon db.js
