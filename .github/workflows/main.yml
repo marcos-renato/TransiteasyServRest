@@ -28,12 +28,12 @@ jobs:
           
       - name: Set up environment variables
         run: |
-          echo "HOSTDBSECRET=${{ secrets.HOSTDBSECRET }}" >> $GITHUB_ENV
-          echo "PORTDBSECRET=${{ secrets.PORTDBSECRET }}" >> $GITHUB_ENV
-          echo "USERNAMEDBSECRET=${{ secrets.USERNAMEDBSECRET }}" >> $GITHUB_ENV
-          echo "PASSWORDDBSECRET=${{ secrets.PASSWORDDBSECRET }}" >> $GITHUB_ENV
-          echo "DATABASEDBSECRET=${{ secrets.DATABASEDBSECRET }}" >> $GITHUB_ENV
-          echo "DIALECTDBSECRET=${{ secrets.DIALECTDBSECRET }}" >> $GITHUB_ENV
+          echo "HOSTDBSECRET=${{ secrets.HOSTDBSECRET }}" >> .ENV
+          echo "PORTDBSECRET=${{ secrets.PORTDBSECRET }}" >> .ENV
+          echo "USERNAMEDBSECRET=${{ secrets.USERNAMEDBSECRET }}" >> .ENV
+          echo "PASSWORDDBSECRET=${{ secrets.PASSWORDDBSECRET }}" >> .ENV
+          echo "DATABASEDBSECRET=${{ secrets.DATABASEDBSECRET }}" >> .ENV
+          echo "DIALECTDBSECRET=${{ secrets.DIALECTDBSECRET }}" >> .ENV
      
             
       - name: Instalação do Jest e dos pacotes para teste
