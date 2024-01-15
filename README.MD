@@ -17,4 +17,3 @@ git clone https://github.com/marcos-renato/TransiteasyServRest.git
 
 Obs.: utiliza dotenv necessita criar arquivo .env
 e colocar os dados de conexão nas variaveis de ambiente
-
