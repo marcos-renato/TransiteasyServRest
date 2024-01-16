@@ -22,17 +22,18 @@ jobs:
       # checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Setup Node.js environment
+        env:
+          OUTPUT_HOSTDBSECRET: ${{ secrets.HOSTDBSECRET }}
+          OUTPUT_PORTDBSECRET: ${{ secrets.PORTDBSECRET }}
+          OUTPUT_USERNAMEDBSECRET: ${{ secrets.USERNAMEDBSECRET }}
+          OUTPUT_PASSWORDDBSECRET: ${{ secrets.PASSWORDDBSECRET }}
+          OUTPUT_DATABASEDBSECRET: ${{ secrets.DATABASEDBSECRET }}
+          OUTPUT_DIALECTDBSECRET: ${{ secrets.DIALECTDBSECRET }}
         uses: actions/setup-node@v4.0.0
         with:
           node-version: '20.10.0'
+	  
       - name: Instalação do Jest e dos pacotes para teste
-      	env:
-       	  OUTPUT_HOSTDBSECRET= ${{ secrets.HOSTDBSECRET }}
-	  OUTPUT_PORTDBSECRET= ${{ secrets.PORTDBSECRET }}
-	  OUTPUT_USERNAMEDBSECRET= ${{ secrets.USERNAMEDBSECRET }}
-	  OUTPUT_PASSWORDDBSECRET= ${{ secrets.PASSWORDDBSECRET }}
-	  OUTPUT_DATABASEDBSECRET= ${{ secrets.DATABASEDBSECRET }}
-	  OUTPUT_DIALECTDBSECRET= ${{ secrets.DIALECTDBSECRET }}
         run: |
           npm install jest
           npm install
