@@ -32,7 +32,6 @@ jobs:
         uses: actions/setup-node@v4.0.0
         with:
           node-version: '20.10.0'
-	  
       - name: Instalação do Jest e dos pacotes para teste
         run: |
           npm install jest
