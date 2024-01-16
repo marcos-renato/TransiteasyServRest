@@ -37,11 +37,11 @@ jobs:
         env: # env available for only this steps
           IS_SERVER: true
             ENV_KEY_HOSTDBSECRET= ${{ secrets.HOSTDBSECRET }}
-	          ENV_KEY_PORTDBSECRET= ${{ secrets.PORTDBSECRET }}
-	          ENV_KEY_USERNAMEDBSECRET= ${{ secrets.USERNAMEDBSECRET }}
-	          ENV_KEY_PASSWORDDBSECRET= ${{ secrets.PASSWORDDBSECRET }}
-	          ENV_KEY_DATABASEDBSECRET= ${{ secrets.DATABASEDBSECRET }}
-	          ENV_KEY_DIALECTDBSECRET= ${{ secrets.DIALECTDBSECRET }}
+	    ENV_KEY_PORTDBSECRET= ${{ secrets.PORTDBSECRET }}
+	    ENV_KEY_USERNAMEDBSECRET= ${{ secrets.USERNAMEDBSECRET }}
+	    ENV_KEY_PASSWORDDBSECRET= ${{ secrets.PASSWORDDBSECRET }}
+	    ENV_KEY_DATABASEDBSECRET= ${{ secrets.DATABASEDBSECRET }}
+	    ENV_KEY_DIALECTDBSECRET= ${{ secrets.DIALECTDBSECRET }}
             
       - name: Instalação do Jest e dos pacotes para teste
         run: |
