@@ -26,15 +26,22 @@ jobs:
         with:
           node-version: '20.10.0'
           
-      - name: Set up environment variables
-        run: |
-          echo "HOSTDBSECRET=${{ secrets.HOSTDBSECRET }}" >> .ENV
-          echo "PORTDBSECRET=${{ secrets.PORTDBSECRET }}" >> .ENV
-          echo "USERNAMEDBSECRET=${{ secrets.USERNAMEDBSECRET }}" >> .ENV
-          echo "PASSWORDDBSECRET=${{ secrets.PASSWORDDBSECRET }}" >> .ENV
-          echo "DATABASEDBSECRET=${{ secrets.DATABASEDBSECRET }}" >> .ENV
-          echo "DIALECTDBSECRET=${{ secrets.DIALECTDBSECRET }}" >> .ENV
-     
+      - name: Create dotenv
+      # You may pin to the exact commit or the version.
+      # uses: iamsauravsharma/create-dotenv@18b2362db24ff1016179b5fefc8e38dbe77b41a5
+        uses: iamsauravsharma/create-dotenv@v2.0.1
+        with:
+          input-prefix: 'ENV_KEY_' # Optional (default: '')
+          file-path: '.env' # Optional (default : '.env')
+          output-prefix: 'OUTPUT_' # Optional (default: '')
+        env: # env available for only this steps
+          IS_SERVER: true
+            ENV_KEY_HOSTDBSECRET= ${{ secrets.HOSTDBSECRET }}
+	          ENV_KEY_PORTDBSECRET= ${{ secrets.PORTDBSECRET }}
+	          ENV_KEY_USERNAMEDBSECRET= ${{ secrets.USERNAMEDBSECRET }}
+	          ENV_KEY_PASSWORDDBSECRET= ${{ secrets.PASSWORDDBSECRET }}
+	          ENV_KEY_DATABASEDBSECRET= ${{ secrets.DATABASEDBSECRET }}
+	          ENV_KEY_DIALECTDBSECRET= ${{ secrets.DIALECTDBSECRET }}
             
       - name: Instalação do Jest e dos pacotes para teste
         run: |
