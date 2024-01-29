@@ -20,6 +20,10 @@ e colocar os dados de conexão nas variaveis de ambiente
 
 ## Servidor rodando
 http://mrpv.online
-* verbus: put/get/set/del
+* verbos: post, put, delete e get
 * entidades: pais, estado, cidade, cor, viagem, usuario, etc
 * utilizar postman para testar
+
+#### Exemplo:
+* get http://mrpv.online/pais
+
