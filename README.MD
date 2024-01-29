@@ -17,3 +17,9 @@ git clone https://github.com/marcos-renato/TransiteasyServRest.git
 
 Obs.: utiliza dotenv necessita criar arquivo .env
 e colocar os dados de conexão nas variaveis de ambiente
+
+## Servidor rodando
+http://mrpv.online
+* verbus: put/get/set/del
+* entidades: pais, estado, cidade, cor, viagem, usuario, etc
+* utilizar postman para testar
