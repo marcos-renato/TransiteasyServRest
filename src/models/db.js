@@ -2,11 +2,11 @@ require('dotenv').config();
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize({
   dialect: 'mysql',
-  host: '${{secrets.HOSTDBSECRET}}',
-  port: '${{secrets.PORTDBSECRET}}',
-  username: '${{secrets.USERNAMEDBSECRET}}',
-  password: '${{secrets.PASSWORDDBSECRET}}',
-  database: '${{secrets.DIALECTDBSECRET}}'
+  host: ${{secrets.HOSTDBSECRET}},
+  port: ${{secrets.PORTDBSECRET}},
+  username: ${{secrets.USERNAMEDBSECRET}},
+  password: ${{secrets.PASSWORDDBSECRET}},
+  database: ${{secrets.DIALECTDBSECRET}}
 });
 
 // Testar a conexão
